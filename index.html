@@ -1,0 +1,203 @@
+<!DOCTYPE HTML> <!-- All HTML documents must start with this declaration-->
+
+<html> <!-- Defines root of an HTML document-->
+	<head> <!-- Contains information for the document-->
+		<title>Danh Le</title> <!-- title for document-->
+		<meta charset="utf-8" /> <!-- specifies character encoding for HTML document-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> <!--sets width of page to screen of device, then initial zoom level-->
+		<link rel="stylesheet" href="assets/css/main.css" /> <!-- defines relationship between document-->
+		<link rel="icon" href="images/logo.png" width="256px" height="256px"> <!-- Tab logo png-->
+		<script
+  			src="https://code.jquery.com/jquery-3.4.1.js"
+  			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  			crossorigin="anonymous"></script>
+
+		<script>
+			$(function SubForm(e)
+            {   
+				$("#myForm").submit(function(e)
+                {   
+					$.ajax(
+                    {   type: "post",
+                        url: "https://api.apispreadsheets.com/data/12117/",
+                        data: $("#myForm").serializeArray(),
+                        cache: false,
+						success: function(){
+						alert("ERROR OCCURRED")
+						},
+						error: function(){
+						var elem = document.getElementById("test");
+						if (elem.value == "Send Message") 
+							elem.value = "Message Sent";
+						alert("Message Sent. Danh will get back to you soon :)")
+						/*document.getElementById("test").style.background= "#00aaff";*/
+						}
+					});
+                });
+            });
+		
+		</script>
+	</head>
+
+	<body class="is-preload"> <!--defines document body-->
+
+		<!-- Header -->
+			<header id="header"> <!-- header for document-->
+				<div class="inner"> <!-- defines section in a document-->
+					<a class="image avatar"><img src="images/avatar.jpg" alt="" /></a> <!-- <a> defines hyperlink-->
+					<h1><strong>My name is Danh Le</strong>, I am a student at the University of South Florida studying Computer Science.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main"> <!-- main section for the body-->
+
+				<!-- One -->
+					<section id="one"> <!-- section 1 for about me-->
+						<header class="major">
+							<h2>About Me</h2>
+						</header> <!-- p defines paragraph-->
+						<p>My goal is to obtain an internship in Software Engineering and develop new technologies using modern development tools! I am extremely motivated and eager to learn new things which I can apply to a greater product. I believe that my experience working with projects, people, and real world applications will translate well into broad tech teams.</p>
+						<p>Here are some of the technologies that I have been working with:</p>
+						<ul id = "skills">
+							<li>Programming Languages: Python, C, C++, C#, Java, MATLAB</li>
+							<li>Web Development: HTML, CSS, Javascript, jQuery</li>
+							<li>Tools: Linux, Unix, Github/Git, SSH, Microsoft Office</li>
+							<li>DevOps: AWS, Docker, Pachyderm</li>
+						</ul>
+						<ul class="actions"> <!-- unordered list-->
+							<li><a href="images/DanhLeResume3:14:21.pdf" target="_blank" class="button">Resume</a></li> <!-- list item, href = # links to top of the page -->
+						</ul>
+					</section>
+
+					<section id="Experience">
+						<header class="major">
+							<h2>Experience</h2>
+						</header>
+						<h4>Cybersecurity and Engineering Intern - <span style = "color: #00aaff">SOFWERX</span></h4>
+						<h5><i>Aug 2020 - Present</i></h5>
+						<ul>
+							<li>Worked on possible solutions to help the warfighter operate against facial recognition and identification software.</li>
+							<li>Utilized open source technology, such as Python, MATLAB, Docker, Pachyderm, and Deep Neural Networks (OpenCV, SciKit, and Tensorflow) to fight against an adversarial attack using a Linux platform.</li>
+							<li>Developed and collaborated with a small team to integrate adversarial images and infrared light-emitting diodes into everyday attire to resist Machine Learning algorithms.</li>
+						</ul>
+						<h4>Mental Health Technician - <span style = "color: #00aaff">North Tampa Behavioral Health Hospital</span></h4>
+						<h5><i>Oct 2018 - Oct 2019</i></h5>
+						<ul>
+							<li>Provided direct assistance for patients’ health and well-being including bathing, grooming, feeding, and supplying daily essentials.</li>
+							<li>Measured and recorded daily patient vital signs for health monitoring.</li>
+							<li>Assisted hospital personnel with their jobs by charting data, organizing information and files, and checking on patients.</li>
+						</ul>
+						<h4>Server Assistant - <span style = "color: #00aaff">Cantina Laredo</span></h4>
+						<h5><i>Apr 2017 - Jul 2018</i></h5>
+						<ul>
+							<li>Provided customers with professional and exceptional service with a large team.</li>
+						</ul>
+					</section>
+
+				<!-- Two -->
+					<section id="two">
+						<h2>Projects</h2>
+						<div class="row">
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<h3>BullNav</h3>
+								<a href = "https://github.com/thedanhle/BullNav" target = "_blank">View Source</a>
+								<p>Designed a navigational application using Microsoft PowerApps for students with disabilities.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/08.jpg" class="image fit thumb"><img src="images/thumbs/08.jpg" alt="" /></a>
+								<h3>ArtFromMi Website</h3>
+								<a>Under Construction</a>
+								<p>Developing and formatting a website portfolio to learn and illustrate web application fundamentals using HTML, CSS, Javascript, and jQuery.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
+								<h3>A-Star Pathfinding Algorithm Visualizer</h3>
+								<a href = "https://github.com/thedanhle/A-Star-Pathfinding" target = "_blank">View Source</a>
+								<p>Created an interactable visualizer for the A-Star pathfinding algorithm using Python and Pygame.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
+								<h3>Score Without 4</h3>
+								<a href = "https://github.com/thedanhle/Score-Without-4" target = "_blank">View Source</a>
+								<p>A connecting game made with the use of Python and Pygame.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/07.jpg" class="image fit thumb"><img src="images/thumbs/07.jpg" alt="" /></a>
+								<h3>Counter-Surveillance Street Wear (C-STARE)</h3>
+								<a href = "https://github.com/thedanhle/C-STARE" target = "_blank">View Source</a>
+								<p>Developed and collaborated with a small team to integrate adversarial images and infrared light-emitting diodes into everyday attire to resist Machine Learning algorithms.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
+								<h3>All Domain Urban Experimentation (A.D.U.E)</h3>
+								<a href = "https://github.com/thedanhle/Infrared-Laser-Turret" target = "_blank">View Source</a>
+								<p>Expanding the C-STARE project with USSOCOM / USASOC insight to further create efficient solutions to counter facial recognition technology by manipulating machine learning algorithms and neural networks.</p>
+							</article>
+						</div>
+						<ul class="actions"> <!-- unordered list-->
+							<li><a href="https://github.com/thedanhle" target="_blank" class="button">Github Repositories</a></li> <!-- list item, href = # links to top of the page -->
+						</ul>
+					</section>
+
+				<!-- Three -->
+					<section id="three">
+						<h2>Get In Touch</h2>
+						<p>Please feel free to send me a message for collaboration opportunities or questions. I will try to get back to you as soon as possible. Thank you!</p>
+						<div class="row">
+							<div class="col-8 col-12-small">
+								<iframe name = "dummyframe" id="dummyframe" style = "display: none;" onsubmit = "SubForm()"></iframe>
+								<form id="myForm" method="POST" onsubmit="return SubForm()" onclick = "SubForm()" data-email="from_email@example.com" action="https://script.google.com/macros/s/AKfycbyq8nTeevhNZI-2O_CneuCk-wZK3yckPxTMzb_9XFuhBvMqoNrY/exec" target = "dummyframe">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" id = "test" onsubmit="SubForm()" value="Send Message" /></li>
+									</ul>
+								</form>
+							</div>
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<a href="mailto:danhthanhle@usf.edu">danhthanhle@usf.edu</a>
+									</li>
+									<li>
+										<h3 class="icon brands fa-github"><span class="label">Email</span></h3>
+										<a href="https://github.com/thedanhle" target = "_blank">Danh's Github</a>
+									</li>
+									<li>
+										<h3 class="icon brands fa-linkedin"><span class="label">Email</span></h3>
+										<a href="https://linkedin.com/in/thedanhle" target = "_blank">Danh's LinkedIn</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="mailto:danhthanhle@usf.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://github.com/thedanhle" target = "_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/thedanhle/" target = "_blank" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+					</ul>
+				</div>
+				<p>Designed by: Danh Le</p>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
