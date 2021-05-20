@@ -22,10 +22,10 @@
                         url: "https://api.apispreadsheets.com/data/12117/",
                         data: $("#myForm").serializeArray(),
                         cache: false,
-						success: function(){
+						error: function(){
 						alert("ERROR OCCURRED")
 						},
-						error: function(){
+						success: function(){
 						var elem = document.getElementById("test");
 						if (elem.value == "Send Message") 
 							elem.value = "Message Sent";
