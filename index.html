@@ -22,14 +22,14 @@
                         url: "https://api.apispreadsheets.com/data/12117/",
                         data: $("#myForm").serializeArray(),
                         cache: false,
-						error: function(){
-						alert("ERROR OCCURRED")
-						},
 						success: function(){
 						var elem = document.getElementById("test");
 						if (elem.value == "Send Message") 
 							elem.value = "Message Sent";
 						alert("Message Sent. Danh will get back to you soon :)")
+						},
+						error: function(){
+						alert("ERROR OCCURRED")
 						/*document.getElementById("test").style.background= "#00aaff";*/
 						}
 					});
